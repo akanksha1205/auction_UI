@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(250, 249, 249);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(250, 249, 249);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=date], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(250, 249, 249);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(250, 249, 249);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=tel], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(250, 249, 249);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #0e131a;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #1789d4;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+h3{
+    text-align: center;
+
+}
+</style>
+<body>
+
+<h3>BID PRODUCT</h3>
+
+<div>
+  <form [formGroup]="bidform" (ngSubmit)="bidSubmitted()" action="/action_page.php">
+
+    <label for="firstName">First Name</label>
+    <input type="text" class="form-control" formControlName="firstName" id="firstName" name="firstName" placeholder="Enter the Buyer First Name">
+    
+    <label for="lastName">Last Name</label>
+    <input type="text" class="form-control" formControlName="lastName" id="lastName" name="lastName" placeholder="Enter the Buyer Last Name">
+    
+    <label for="phone">Phone</label>
+    <input type="tel" class="form-control" formControlName="phone" id="phone" name="phone" placeholder="Enter the Buyer Phone">
+
+    <label for="emailId">Email</label>
+    <input type="email" class="form-control" formControlName="emailId" id="emailId" name="emailId" placeholder="Enter the Buyer Email">
+ 
+    <label for="address">Address</label>
+    <input type="text" class="form-control" formControlName="address" id="address" name="address" placeholder="Enter the Buyer Address">
+    
+    <label for="city">City</label>
+    <input type="text" class="form-control" formControlName="city" id="city" name="city" placeholder="Enter the Buyer City">
+
+    <label for="state">State</label>
+    <input type="text" class="form-control" formControlName="state" id="state" name="state" placeholder="Enter the Buyer State">
+
+    <label for="pin">Pin</label>
+    <input type="text" class="form-control" formControlName="pin" id="pin" name="pin" placeholder="Enter the Buyer Pin">
+
+    <label for="productId">Product Id</label>
+    <input type="number" class="form-control" formControlName="productId" id="productId" name="productId" placeholder="Enter the Product Id">
+
+    <label for="bidAmount">Biding Amount</label>
+    <input type="number" class="form-control" formControlName="bidAmount" id="bidAmount" name="bidAmount" placeholder="Enter the Biding Amount">
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
+
+

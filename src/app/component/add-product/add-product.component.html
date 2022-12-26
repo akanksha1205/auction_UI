@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(250, 249, 249);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(250, 249, 249);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=date], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(250, 249, 249);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(250, 249, 249);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=tel], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(250, 249, 249);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #0e131a;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #1789d4;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+h3{
+    text-align: center;
+
+}
+
+</style>
+<body>
+
+<h3>ADD PRODUCT</h3>
+
+<div>
+  <form [formGroup]="createform" (ngSubmit)="createSubmitted()" action="/action_page.php" >
+    <label for="productName">Product Name</label>
+    <input type="text" class="form-control" formControlName="productName" id="productName" name="productName" placeholder="Enter the product name">
+
+    <label for="shortDescription">Short Description</label>
+    <input type="text" class="form-control" formControlName="shortDescription" id="shortDescription" name="shortDescription" placeholder="Enter the Short Description">
+    
+    <label for="detailedDescription">Detailed Description</label>
+    <input type="text" class="form-control" formControlName="detailedDescription" id="detailedDescription" name="detailedDescription" placeholder="Enter the Detailed Description">
+    
+    <!-- <div class="col ps-3 mb-3"> -->
+      <div class="m-1">Category</div>
+      <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" value="Painting" id="Painting" formControlName="category">
+          <label class="form-check-label" for="Painting">Painting</label>
+      </div>
+      <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" value="Sculptor" id="Sculptor" formControlName="category">
+          <label class="form-check-label" for="Sculptor">Sculptor</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" value="Ornament" id="Ornament" formControlName="category">
+        <label class="form-check-label" for="Ornament">Ornament</label>
+    </div>
+  <!-- </div> -->
+    <!-- <label   for="category" >Category</label>
+    <select   id="category" name="category" >  
+      <option value="none" selected disabled hidden>Select an Option</option>
+      <option  value="Painting" formControlName="category">Painting</option>
+      <option  value="Sculptor" formControlName="category" >Sculptor</option>
+      <option  value="Ornament" formControlName="category">Ornament</option>
+    </select> -->
+    <br>
+    <label for="startingPrice">Starting Price</label>
+    <input type="number" class="form-control" formControlName="startingPrice" id="startingPrice" name="startingPrice" placeholder="Enter the Starting Price">
+
+    <label for="bidEndDate">Bid End Date</label>
+    <input type="date" class="form-control" formControlName="bidEndDate" id="bidEndDate" name="bidEndDate">
+    
+    <label for="sellerFirstName">First Name</label>
+    <input type="text" class="form-control" formControlName="sellerFirstName" id="sellerFirstName" name="sellerFirstName" placeholder="Enter the Seller First Name">
+    
+    <label for="sellerLastName">Last Name</label>
+    <input type="text" class="form-control" formControlName="sellerLastName" id="sellerLastName" name="sellerLastName" placeholder="Enter the Seller Last Name">
+    
+    <label for="sellerPhone">Phone</label>
+    <input type="tel" class="form-control" formControlName="sellerPhone" id="sellerPhone" name="sellerPhone" placeholder="Enter the Seller Phone">
+
+    <label for="sellerEmail">Email</label>
+    <input type="email" class="form-control" formControlName="sellerEmail" id="sellerEmail" name="sellerEmail" placeholder="Enter the Seller Email">
+ 
+    <label for="sellerAddress">Address</label>
+    <input type="text" class="form-control" formControlName="sellerAddress" id="sellerAddress" name="sellerAddress" placeholder="Enter the Seller Address">
+    
+    <label for="sellerCity">City</label>
+    <input type="text" class="form-control" formControlName="sellerCity" id="sellerCity" name="sellerCity" placeholder="Enter the Seller City">
+
+    <label for="sellerState">State</label>
+    <input type="text" class="form-control" formControlName="sellerState" id="sellerState" name="sellerState" placeholder="Enter the Seller State">
+
+    <label for="sellerPin">Pin</label>
+    <input type="text" class="form-control" formControlName="sellerPin" id="sellerPin" name="sellerPin" placeholder="Enter the Seller Pin">
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+form.example input[type=text] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(12, 12, 12);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form.example button {
+  width: 30%;
+  background-color: #0e131a;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+form.example button:hover {
+  background: #da0b0b;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+<h2>Delete Product</h2>
+<form [formGroup]="deleteform"   class="example">
+ <div class="form-group" >
+  <input type="text" placeholder="Product ID.." name="delete" class="form-control" formControlName="id">
+  <!-- <button type="submit" value="submit" (click) = "deleteSubmitted()" ></button> -->
+  <button class="btn btn-warning" (click) = "delete()">Delete</button>
+  <!-- (click) = "deleteSubmitted()" -->
+</div>
+</form>
+</body>
+</html>
+
